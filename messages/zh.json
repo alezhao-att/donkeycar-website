@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "home": "首页",
+    "features": "功能特性",
+    "gettingStarted": "快速开始",
+    "community": "社区",
+    "docs": "文档"
+  },
+  "hero": {
+    "title": "打造你自己的自动驾驶小车",
+    "subtitle": "Donkeycar 是一个开源的 DIY 自动驾驶平台，专为小型遥控车设计。基于 Python 构建，由机器学习驱动，让你可以使用自己的赛道和数据训练专属的自动驾驶模型。",
+    "cta": {
+      "primary": "立即开始",
+      "secondary": "在 GitHub 上查看"
+    }
+  },
+  "features": {
+    "title": "为什么选择 Donkeycar？",
+    "subtitle": "构建、训练和竞赛你的自动驾驶车辆所需的一切。",
+    "items": {
+      "autonomousDriving": {
+        "title": "自动驾驶",
+        "description": "使用行为克隆和端到端深度学习训练你的小车自主驾驶。收集数据、训练模型，观看你的小车自主导航赛道。",
+        "icon": "car"
+      },
+      "machineLearning": {
+        "title": "机器学习",
+        "description": "利用 TensorFlow 和 PyTorch 构建从驾驶数据中学习的神经网络。尝试不同的架构和训练策略。",
+        "icon": "brain"
+      },
+      "hardwareFlexibility": {
+        "title": "硬件灵活性",
+        "description": "支持在树莓派、Jetson Nano 或任何 Linux 计算机上运行。广泛支持各种遥控车平台、摄像头和传感器，给你完全的自由。",
+        "icon": "chip"
+      },
+      "openSourceCommunity": {
+        "title": "开源社区",
+        "description": "加入全球数千名创客的行列。为代码库做贡献、分享你的作品、参加虚拟和现实世界的比赛，一起学习成长。",
+        "icon": "users"
+      }
+    }
+  },
+  "gettingStarted": {
+    "title": "快速上手",
+    "subtitle": "四个简单步骤，从零到自动驾驶。",
+    "steps": {
+      "install": {
+        "number": "01",
+        "title": "安装 Donkeycar",
+        "description": "搭建开发环境，一条命令安装 Donkeycar Python 包。",
+        "code": "pip install donkeycar[pc]"
+      },
+      "build": {
+        "number": "02",
+        "title": "组装你的小车",
+        "description": "使用树莓派或 Jetson Nano、摄像头模块和电机控制器组装你的遥控车。",
+        "code": "donkey createcar --path ~/mycar"
+      },
+      "train": {
+        "number": "03",
+        "title": "训练你的模型",
+        "description": "手动驾驶小车收集训练数据，然后训练神经网络学习你的驾驶行为。",
+        "code": "donkey train --tub ./data --model ./models/mypilot.h5"
+      },
+      "drive": {
+        "number": "04",
+        "title": "自动驾驶",
+        "description": "加载训练好的模型，让你的小车自主驾驶赛道。不断迭代改进！",
+        "code": "python manage.py drive --model ~/mycar/models/mypilot.h5"
+      }
+    }
+  },
+  "community": {
+    "title": "加入社区",
+    "subtitle": "成为全球创客、工程师和 AI 爱好者网络的一员，共同构建自动驾驶的未来。",
+    "stats": {
+      "builders": "10,000+",
+      "buildersLabel": "全球创客",
+      "stars": "25k+",
+      "starsLabel": "GitHub 星标",
+      "contributors": "500+",
+      "contributorsLabel": "贡献者"
+    },
+    "links": {
+      "github": "在 GitHub 上加星",
+      "discord": "加入 Discord",
+      "contribute": "参与贡献"
+    }
+  },
+  "footer": {
+    "description": "一个开源的 DIY 自动驾驶平台，专为小型遥控车设计。通过构建和竞赛自动驾驶车辆来学习 AI。",
+    "quickLinks": "快速链接",
+    "resources": "资源",
+    "community": "社区",
+    "copyright": "Donkeycar 项目。基于 MIT 许可证开源。"
+  },
+  "docs": {
+    "title": "文档",
+    "subtitle": "关于使用 Donkeycar 构建、训练和竞赛所需了解的一切。",
+    "sections": {
+      "api": {
+        "title": "API 参考",
+        "items": {
+          "vehicle": {
+            "title": "Vehicle API",
+            "description": "核心车辆类，用于管理组件、驾驶循环和数据记录。"
+          },
+          "parts": {
+            "title": "Parts API",
+            "description": "模块化组件，包括摄像头、执行器、控制器和 AI 驾驶员。"
+          },
+          "training": {
+            "title": "Training API",
+            "description": "数据增强、模型训练和迁移学习工具。"
+          }
+        }
+      },
+      "tutorials": {
+        "title": "教程",
+        "items": {
+          "firstCar": {
+            "title": "组装你的第一辆车",
+            "description": "硬件组装和软件安装的分步指南。"
+          },
+          "firstModel": {
+            "title": "训练你的第一个模型",
+            "description": "收集数据、训练神经网络并测试自动驾驶。"
+          },
+          "simulator": {
+            "title": "使用模拟器",
+            "description": "使用 Donkeycar 模拟器进行虚拟训练和测试。"
+          }
+        }
+      },
+      "faq": {
+        "title": "常见问题",
+        "items": {
+          "hardware": {
+            "title": "我需要什么硬件？",
+            "description": "一辆兼容的遥控车、树莓派 4 或 Jetson Nano、广角摄像头和便携式电池组。"
+          },
+          "cost": {
+            "title": "费用是多少？",
+            "description": "基础版本的费用约为 200-300 美元，具体取决于组件和所在地区。"
+          },
+          "experience": {
+            "title": "我需要机器学习经验吗？",
+            "description": "不需要！Donkeycar 专为初学者设计。基本的 Python 知识会有帮助，但不是必需的。"
+          }
+        }
+      }
+    }
+  },
+  "featuresPage": {
+    "hero": {
+      "title": "强大功能",
+      "subtitle": "Donkeycar 提供了从数据收集到模型部署的完整自动驾驶车辆构建工具包。"
+    },
+    "sections": {
+      "driving": {
+        "title": "自动驾驶",
+        "items": {
+          "behavioral": {
+            "title": "行为克隆",
+            "description": "记录你的驾驶行为，训练神经网络在赛道上模仿你的操作。",
+            "icon": "play"
+          },
+          "endToEnd": {
+            "title": "端到端学习",
+            "description": "输入原始摄像头图像，输出转向和油门指令。无需手写规则。",
+            "icon": "arrows"
+          },
+          "realtime": {
+            "title": "实时推理",
+            "description": "在边缘设备上以 20+ FPS 运行训练模型，实现响应式自主控制。",
+            "icon": "bolt"
+          }
+        }
+      },
+      "ml": {
+        "title": "机器学习",
+        "items": {
+          "tensorflow": {
+            "title": "TensorFlow 和 Keras",
+            "description": "使用行业标准深度学习框架构建和训练模型。",
+            "icon": "cube"
+          },
+          "pytorch": {
+            "title": "PyTorch 支持",
+            "description": "使用 PyTorch 进行灵活的模型开发和研究实验。",
+            "icon": "fire"
+          },
+          "transfer": {
+            "title": "迁移学习",
+            "description": "微调预训练模型，用更少的数据获得更好的性能。",
+            "icon": "refresh"
+          }
+        }
+      },
+      "hardware": {
+        "title": "硬件与平台",
+        "items": {
+          "raspberryPi": {
+            "title": "树莓派",
+            "description": "全面支持树莓派 4 和 5，优化的摄像头和 GPIO 集成。",
+            "icon": "cpu"
+          },
+          "jetson": {
+            "title": "NVIDIA Jetson",
+            "description": "在 Jetson Nano 和 Orin 上进行 GPU 加速推理，获得最佳性能。",
+            "icon": "gpu"
+          },
+          "sensors": {
+            "title": "传感器套件",
+            "description": "支持摄像头、激光雷达、IMU、编码器和超声波距离传感器。",
+            "icon": "signal"
+          }
+        }
+      }
+    }
+  },
+  "gettingStartedPage": {
+    "hero": {
+      "title": "快速开始",
+      "subtitle": "按照这些指南，从开箱到自动驾驶。"
+    },
+    "sections": {
+      "installation": {
+        "title": "安装",
+        "description": "在你的电脑和小车的单板计算机上安装 Donkeycar。",
+        "steps": [
+          "安装 Python 3.8+ 和 pip",
+          "运行：pip install donkeycar[pc]",
+          "创建你的车：donkey createcar --path ~/mycar",
+          "在树莓派/Jetson 上安装依赖"
+        ]
+      },
+      "hardware": {
+        "title": "硬件设置",
+        "description": "使用以下组件组装你的自动驾驶车辆。",
+        "items": [
+          "1/16 或 1/10 比例遥控车（推荐 HSP 94186）",
+          "树莓派 4（4GB+）或 NVIDIA Jetson Nano",
+          "广角摄像头模块（160° 视角）",
+          "PCA9685 舵机控制板",
+          "便携式 USB 电池组（10,000mAh+）"
+        ]
+      },
+      "software": {
+        "title": "软件配置",
+        "description": "配置小车软件以进行数据收集和自动驾驶。",
+        "steps": [
+          "编辑 myconfig.py 设置摄像头和转向参数",
+          "校准转向和油门范围",
+          "使用网页控制器或手柄测试手动驾驶",
+          "验证数据记录到 tub 目录"
+        ]
+      },
+      "firstModel": {
+        "title": "你的第一个模型",
+        "description": "收集数据并训练你的第一个自动驾驶模型。",
+        "steps": [
+          "在赛道上驾驶 10-20 圈收集数据",
+          "将 tub 数据传输到训练电脑",
+          "训练：donkey train --tub ./data --model ./models/pilot.h5",
+          "将模型复制回小车并测试自动模式"
+        ]
+      }
+    }
+  },
+  "communityPage": {
+    "hero": {
+      "title": "社区",
+      "subtitle": "Donkeycar 由一个充满热情的全球创客、赛车手和 AI 爱好者社区共同构建。"
+    },
+    "sections": {
+      "github": {
+        "title": "GitHub",
+        "description": "浏览源代码、报告问题和提交拉取请求。Donkeycar 仓库是项目的核心。",
+        "cta": "查看仓库"
+      },
+      "discord": {
+        "title": "Discord",
+        "description": "加入我们活跃的 Discord 服务器，与其他创客交流、获取帮助并分享你的进展。",
+        "cta": "加入服务器"
+      },
+      "contribute": {
+        "title": "参与贡献",
+        "description": "无论是编写代码、改进文档还是帮助社区中的其他人——每一份贡献都很重要。",
+        "cta": "贡献指南"
+      },
+      "events": {
+        "title": "比赛与活动",
+        "description": "参加全球各地举办的虚拟和现实世界 Donkeycar 比赛。与其他创客一较高下。",
+        "cta": "即将举行的活动"
+      }
+    }
+  }
+}

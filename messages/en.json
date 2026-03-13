@@ -1,0 +1,299 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "gettingStarted": "Getting Started",
+    "community": "Community",
+    "docs": "Docs"
+  },
+  "hero": {
+    "title": "Build Your Own Self-Driving Car",
+    "subtitle": "Donkeycar is an open-source DIY self-driving platform for small scale cars. Built with Python and powered by machine learning, it lets you train your own autopilot using your own track and data.",
+    "cta": {
+      "primary": "Get Started",
+      "secondary": "View on GitHub"
+    }
+  },
+  "features": {
+    "title": "Why Donkeycar?",
+    "subtitle": "Everything you need to build, train, and race your own autonomous vehicle.",
+    "items": {
+      "autonomousDriving": {
+        "title": "Autonomous Driving",
+        "description": "Train your car to drive itself using behavioral cloning and end-to-end deep learning. Collect data, train a model, and watch your car navigate the track autonomously.",
+        "icon": "car"
+      },
+      "machineLearning": {
+        "title": "Machine Learning",
+        "description": "Leverage TensorFlow and PyTorch to build neural networks that learn from your driving data. Experiment with different architectures and training strategies.",
+        "icon": "brain"
+      },
+      "hardwareFlexibility": {
+        "title": "Hardware Flexibility",
+        "description": "Run on Raspberry Pi, Jetson Nano, or any Linux computer. Support for a wide range of RC car platforms, cameras, and sensors gives you complete freedom.",
+        "icon": "chip"
+      },
+      "openSourceCommunity": {
+        "title": "Open Source Community",
+        "description": "Join thousands of builders worldwide. Contribute to the codebase, share your builds, participate in virtual and real-world races, and learn together.",
+        "icon": "users"
+      }
+    }
+  },
+  "gettingStarted": {
+    "title": "Get Up and Running",
+    "subtitle": "From zero to autonomous driving in four simple steps.",
+    "steps": {
+      "install": {
+        "number": "01",
+        "title": "Install Donkeycar",
+        "description": "Set up your development environment and install the Donkeycar Python package with a single command.",
+        "code": "pip install donkeycar[pc]"
+      },
+      "build": {
+        "number": "02",
+        "title": "Build Your Car",
+        "description": "Assemble your RC car with a Raspberry Pi or Jetson Nano, camera module, and motor controller.",
+        "code": "donkey createcar --path ~/mycar"
+      },
+      "train": {
+        "number": "03",
+        "title": "Train Your Model",
+        "description": "Drive your car manually to collect training data, then train a neural network to learn your driving behavior.",
+        "code": "donkey train --tub ./data --model ./models/mypilot.h5"
+      },
+      "drive": {
+        "number": "04",
+        "title": "Drive Autonomously",
+        "description": "Load your trained model and let your car drive itself around the track. Iterate and improve!",
+        "code": "python manage.py drive --model ~/mycar/models/mypilot.h5"
+      }
+    }
+  },
+  "community": {
+    "title": "Join the Community",
+    "subtitle": "Be part of a global network of makers, engineers, and AI enthusiasts building the future of autonomous vehicles.",
+    "stats": {
+      "builders": "10,000+",
+      "buildersLabel": "Builders Worldwide",
+      "stars": "25k+",
+      "starsLabel": "GitHub Stars",
+      "contributors": "500+",
+      "contributorsLabel": "Contributors"
+    },
+    "links": {
+      "github": "Star on GitHub",
+      "discord": "Join Discord",
+      "contribute": "Contribute"
+    }
+  },
+  "footer": {
+    "description": "An open-source DIY self-driving platform for small scale cars. Learn AI by building and racing autonomous vehicles.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "community": "Community",
+    "copyright": "Donkeycar Project. Open source under MIT License."
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Everything you need to know about building, training, and racing with Donkeycar.",
+    "sections": {
+      "api": {
+        "title": "API Reference",
+        "items": {
+          "vehicle": {
+            "title": "Vehicle API",
+            "description": "Core vehicle class for managing parts, driving loops, and data recording."
+          },
+          "parts": {
+            "title": "Parts API",
+            "description": "Modular components for cameras, actuators, controllers, and AI pilots."
+          },
+          "training": {
+            "title": "Training API",
+            "description": "Tools for data augmentation, model training, and transfer learning."
+          }
+        }
+      },
+      "tutorials": {
+        "title": "Tutorials",
+        "items": {
+          "firstCar": {
+            "title": "Build Your First Car",
+            "description": "Step-by-step guide to assembling hardware and installing software."
+          },
+          "firstModel": {
+            "title": "Train Your First Model",
+            "description": "Collect data, train a neural network, and test autonomous driving."
+          },
+          "simulator": {
+            "title": "Using the Simulator",
+            "description": "Get started with the Donkeycar simulator for virtual training and testing."
+          }
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "items": {
+          "hardware": {
+            "title": "What hardware do I need?",
+            "description": "A compatible RC car, Raspberry Pi 4 or Jetson Nano, wide-angle camera, and a portable battery pack."
+          },
+          "cost": {
+            "title": "How much does it cost?",
+            "description": "A basic build costs around $200-$300 USD depending on components and your region."
+          },
+          "experience": {
+            "title": "Do I need ML experience?",
+            "description": "No! Donkeycar is designed for beginners. Basic Python knowledge is helpful but not required."
+          }
+        }
+      }
+    }
+  },
+  "featuresPage": {
+    "hero": {
+      "title": "Powerful Features",
+      "subtitle": "Donkeycar provides a complete toolkit for building autonomous vehicles — from data collection to model deployment."
+    },
+    "sections": {
+      "driving": {
+        "title": "Autonomous Driving",
+        "items": {
+          "behavioral": {
+            "title": "Behavioral Cloning",
+            "description": "Record your driving and train a neural network to mimic your behavior on the track.",
+            "icon": "play"
+          },
+          "endToEnd": {
+            "title": "End-to-End Learning",
+            "description": "Raw camera images go in, steering and throttle commands come out. No hand-coded rules.",
+            "icon": "arrows"
+          },
+          "realtime": {
+            "title": "Real-Time Inference",
+            "description": "Run trained models at 20+ FPS on edge devices for responsive autonomous control.",
+            "icon": "bolt"
+          }
+        }
+      },
+      "ml": {
+        "title": "Machine Learning",
+        "items": {
+          "tensorflow": {
+            "title": "TensorFlow & Keras",
+            "description": "Build and train models using the industry-standard deep learning framework.",
+            "icon": "cube"
+          },
+          "pytorch": {
+            "title": "PyTorch Support",
+            "description": "Use PyTorch for flexible model development and research experimentation.",
+            "icon": "fire"
+          },
+          "transfer": {
+            "title": "Transfer Learning",
+            "description": "Fine-tune pre-trained models to achieve better performance with less data.",
+            "icon": "refresh"
+          }
+        }
+      },
+      "hardware": {
+        "title": "Hardware & Platform",
+        "items": {
+          "raspberryPi": {
+            "title": "Raspberry Pi",
+            "description": "Full support for Raspberry Pi 4 and 5 with optimized camera and GPIO integration.",
+            "icon": "cpu"
+          },
+          "jetson": {
+            "title": "NVIDIA Jetson",
+            "description": "GPU-accelerated inference on Jetson Nano and Orin for maximum performance.",
+            "icon": "gpu"
+          },
+          "sensors": {
+            "title": "Sensor Suite",
+            "description": "Support for cameras, LIDAR, IMU, encoders, and ultrasonic distance sensors.",
+            "icon": "signal"
+          }
+        }
+      }
+    }
+  },
+  "gettingStartedPage": {
+    "hero": {
+      "title": "Getting Started",
+      "subtitle": "Follow these guides to go from unboxing to autonomous driving."
+    },
+    "sections": {
+      "installation": {
+        "title": "Installation",
+        "description": "Install Donkeycar on your computer and your car's single-board computer.",
+        "steps": [
+          "Install Python 3.8+ and pip",
+          "Run: pip install donkeycar[pc]",
+          "Create your car: donkey createcar --path ~/mycar",
+          "Install dependencies on your Pi/Jetson"
+        ]
+      },
+      "hardware": {
+        "title": "Hardware Setup",
+        "description": "Assemble your autonomous vehicle with these components.",
+        "items": [
+          "1/16 or 1/10 scale RC car (HSP 94186 recommended)",
+          "Raspberry Pi 4 (4GB+) or NVIDIA Jetson Nano",
+          "Wide-angle camera module (160° FOV)",
+          "PCA9685 servo controller board",
+          "Portable USB battery pack (10,000mAh+)"
+        ]
+      },
+      "software": {
+        "title": "Software Configuration",
+        "description": "Configure your car's software for data collection and autonomous driving.",
+        "steps": [
+          "Edit myconfig.py to set your camera and steering parameters",
+          "Calibrate steering and throttle ranges",
+          "Test manual driving with a web controller or gamepad",
+          "Verify data recording to the tub directory"
+        ]
+      },
+      "firstModel": {
+        "title": "Your First Model",
+        "description": "Collect data and train your first self-driving model.",
+        "steps": [
+          "Drive 10-20 laps around your track collecting data",
+          "Transfer tub data to your training computer",
+          "Train: donkey train --tub ./data --model ./models/pilot.h5",
+          "Copy the model back to your car and test autonomous mode"
+        ]
+      }
+    }
+  },
+  "communityPage": {
+    "hero": {
+      "title": "Community",
+      "subtitle": "Donkeycar is built by a passionate global community of makers, racers, and AI enthusiasts."
+    },
+    "sections": {
+      "github": {
+        "title": "GitHub",
+        "description": "Browse the source code, report issues, and submit pull requests. The Donkeycar repository is the heart of the project.",
+        "cta": "View Repository"
+      },
+      "discord": {
+        "title": "Discord",
+        "description": "Join our active Discord server to chat with other builders, get help with your build, and share your progress.",
+        "cta": "Join Server"
+      },
+      "contribute": {
+        "title": "Contribute",
+        "description": "Whether you write code, improve documentation, or help others in the community — every contribution matters.",
+        "cta": "Contribution Guide"
+      },
+      "events": {
+        "title": "Races & Events",
+        "description": "Participate in virtual and real-world Donkeycar races held around the globe. Test your skills against other builders.",
+        "cta": "Upcoming Events"
+      }
+    }
+  }
+}
