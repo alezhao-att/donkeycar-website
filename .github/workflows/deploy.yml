@@ -33,6 +33,22 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create root redirect
+        run: |
+          cat > out/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta http-equiv="refresh" content="0;url=/donkeycar-website/en">
+            <title>Redirecting...</title>
+          </head>
+          <body>
+            <script>window.location.href="/donkeycar-website/en";</script>
+            <p>Redirecting to <a href="/donkeycar-website/en">Donkeycar</a>...</p>
+          </body>
+          </html>
+          EOF
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
