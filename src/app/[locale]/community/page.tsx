@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 const SECTION_KEYS = ['github', 'discord', 'contribute', 'events'] as const;
 const SECTION_URLS: Record<string, string> = {
@@ -23,9 +23,11 @@ const SECTION_ICONS: Record<string, JSX.Element> = {
   ),
 };
 
-export default function CommunityPage() {
-  const t = useTranslations('communityPage');
-  const stats = useTranslations('community.stats');
+export default async function CommunityPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('communityPage');
+  const stats = await getTranslations('community.stats');
 
   return (
     <>

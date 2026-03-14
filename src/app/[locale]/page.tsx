@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Hero } from '@/components/Hero';
 import { FeatureCard } from '@/components/FeatureCard';
 import { Link } from '@/i18n/routing';
@@ -6,19 +6,23 @@ import { Link } from '@/i18n/routing';
 const FEATURE_KEYS = ['autonomousDriving', 'machineLearning', 'hardwareFlexibility', 'openSourceCommunity'] as const;
 const STEP_KEYS = ['install', 'build', 'train', 'drive'] as const;
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
   return (
     <>
       <Hero />
-      <FeaturesPreview />
-      <GettingStartedPreview />
-      <CommunityStats />
+      <FeaturesPreview locale={locale} />
+      <GettingStartedPreview locale={locale} />
+      <CommunityStats locale={locale} />
     </>
   );
 }
 
-function FeaturesPreview() {
-  const t = useTranslations('features');
+async function FeaturesPreview({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('features');
 
   return (
     <section className="px-4 py-20 sm:px-6 lg:px-8">
@@ -42,8 +46,9 @@ function FeaturesPreview() {
   );
 }
 
-function GettingStartedPreview() {
-  const t = useTranslations('gettingStarted');
+async function GettingStartedPreview({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('gettingStarted');
 
   return (
     <section className="border-t border-white/10 px-4 py-20 sm:px-6 lg:px-8">
@@ -69,8 +74,9 @@ function GettingStartedPreview() {
   );
 }
 
-function CommunityStats() {
-  const t = useTranslations('community');
+async function CommunityStats({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('community');
 
   return (
     <section className="border-t border-white/10 px-4 py-20 sm:px-6 lg:px-8">

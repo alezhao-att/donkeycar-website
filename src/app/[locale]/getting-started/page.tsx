@@ -1,7 +1,9 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-export default function GettingStartedPage() {
-  const t = useTranslations('gettingStartedPage');
+export default async function GettingStartedPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('gettingStartedPage');
 
   return (
     <>
@@ -12,16 +14,17 @@ export default function GettingStartedPage() {
         </div>
       </section>
 
-      <InstallationSection />
-      <HardwareSection />
-      <SoftwareSection />
-      <FirstModelSection />
+      <InstallationSection locale={locale} />
+      <HardwareSection locale={locale} />
+      <SoftwareSection locale={locale} />
+      <FirstModelSection locale={locale} />
     </>
   );
 }
 
-function InstallationSection() {
-  const t = useTranslations('gettingStartedPage.sections.installation');
+async function InstallationSection({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('gettingStartedPage.sections.installation');
   const steps: string[] = [
     t('steps.0'),
     t('steps.1'),
@@ -49,8 +52,9 @@ function InstallationSection() {
   );
 }
 
-function HardwareSection() {
-  const t = useTranslations('gettingStartedPage.sections.hardware');
+async function HardwareSection({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('gettingStartedPage.sections.hardware');
   const items: string[] = [
     t('items.0'),
     t('items.1'),
@@ -79,8 +83,9 @@ function HardwareSection() {
   );
 }
 
-function SoftwareSection() {
-  const t = useTranslations('gettingStartedPage.sections.software');
+async function SoftwareSection({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('gettingStartedPage.sections.software');
   const steps: string[] = [
     t('steps.0'),
     t('steps.1'),
@@ -108,8 +113,9 @@ function SoftwareSection() {
   );
 }
 
-function FirstModelSection() {
-  const t = useTranslations('gettingStartedPage.sections.firstModel');
+async function FirstModelSection({ locale }: { locale: string }) {
+  setRequestLocale(locale);
+  const t = await getTranslations('gettingStartedPage.sections.firstModel');
   const steps: string[] = [
     t('steps.0'),
     t('steps.1'),

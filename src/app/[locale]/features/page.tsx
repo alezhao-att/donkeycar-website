@@ -1,4 +1,4 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 const SECTION_KEYS = ['driving', 'ml', 'hardware'] as const;
 const ITEM_KEYS: Record<string, string[]> = {
@@ -19,8 +19,10 @@ const ICON_MAP: Record<string, JSX.Element> = {
   signal: <path strokeLinecap="round" strokeLinejoin="round" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12.75h.008v.008H12v-.008z" />,
 };
 
-export default function FeaturesPage() {
-  const t = useTranslations('featuresPage');
+export default async function FeaturesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('featuresPage');
 
   return (
     <>
